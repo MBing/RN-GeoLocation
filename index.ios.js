@@ -37,7 +37,9 @@ export default class GeoLocationMap extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.desc}>
-          <Text> MAPS </Text>
+          <Text style={styles.title}>
+            MAPS
+          </Text>
         </View>
         <MapView
           style={styles.map}
@@ -52,21 +54,28 @@ export default class GeoLocationMap extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: '#F5FCFF',
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'relative',
   },
   desc: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
   },
+  title: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 50,
+  },
   map: {
     position: 'absolute',
-    top: 0,
+    top: 100,
     left: 0,
-    right: 0,
     bottom: 0,
+    right: 0,
   },
 });
 
