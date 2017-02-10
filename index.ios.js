@@ -24,6 +24,12 @@ export default class GeoLocationMap extends Component {
         latitudeDelta: 10,
         longitudeDelta: 10,
       },
+      annotations: [{
+        latitude: 40.72052634,
+        longitude: -73.97686958312988,
+        title: 'New York',
+        subtitle: 'This is cool!',
+      }],
     };
   }
 
@@ -36,6 +42,7 @@ export default class GeoLocationMap extends Component {
         <MapView
           style={styles.map}
           region={this.state.region}
+          annotations={this.state.annotations}
         />
       </View>
     );
