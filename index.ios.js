@@ -4,7 +4,7 @@
  * @flow
  */
 
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import {
   AppRegistry,
   StyleSheet,
@@ -18,7 +18,7 @@ export default class GeoLocationMap extends Component {
     super(props);
 
     this.state = {
-      region: {
+      mapRegion: {
         latitude: 40.712784,
         longitude: -74.005941,
         latitudeDelta: 10,
@@ -37,11 +37,11 @@ export default class GeoLocationMap extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.desc}>
-          <Text> Maps </Text>
+          <Text> MAPS </Text>
         </View>
         <MapView
           style={styles.map}
-          region={this.state.region}
+          region={this.state.mapRegion}
           annotations={this.state.annotations}
         />
       </View>
@@ -62,7 +62,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   map: {
-    flex: 5,
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
   },
 });
 
